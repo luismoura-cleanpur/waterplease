@@ -70,7 +70,7 @@
       <div class="card reveal">
         <h2 style="font-size:26px;margin-bottom:6px">Pedir orçamento</h2>
         <p style="color:var(--muted);margin-bottom:22px">Preenche e enviamos uma proposta à medida.</p>
-        <form class="form-grid" onsubmit="return enviarOrcamento(event)">
+        <form id="lead-form" class="form-grid">
           <div class="field"><label>Nome *</label><input name="nome" required></div>
           <div class="field"><label>Telefone *</label><input name="telefone" required></div>
           <div class="field full"><label>Email</label><input type="email" name="email"></div>
@@ -81,11 +81,17 @@
             </select>
           </div>
           <div class="field"><label>Equipamento de interesse</label>
-            <select name="equipamento"><option>ROH2ICE</option><option>Ainda não sei</option><option>Outro</option></select>
+            <select name="equipamento"><option>ROH2ICE</option><option>Garrafa H₂</option><option>Ultra Detox H₂</option><option>Garrafas personalizadas</option><option>Ainda não sei</option></select>
           </div>
           <div class="field full"><label>Mensagem</label><textarea name="mensagem" placeholder="Conta-nos o que precisas..."></textarea></div>
           <div class="field full"><button class="btn btn--primary" style="width:100%;justify-content:center" type="submit">Enviar pedido</button></div>
         </form>
+        <div id="lead-ok" style="display:none;text-align:center;padding:30px 10px">
+          <div style="font-size:44px;margin-bottom:10px">💧</div>
+          <h3 style="font-size:22px">Só falta enviar!</h3>
+          <p style="color:var(--muted);margin-top:8px">Abrimos o WhatsApp com o teu pedido já preenchido — carrega em <b>Enviar</b> e falamos contigo em breve. Não abriu? Usa o botão:</p>
+          <a href="#" class="btn btn--wpp" data-wpp style="margin-top:16px">💬 Abrir no WhatsApp</a>
+        </div>
       </div>
 
     </div>
@@ -106,14 +112,29 @@
 
 <script src="assets/app.js"></script>
 <script>
-// Por agora envia por WhatsApp/email (sem backend). Luis: ligamos a um backend/CRM quando quiseres.
-function enviarOrcamento(e){
+// Captação de leads → envia o pedido direto para o WhatsApp da Water Please.
+const WPP_LEADS = '351911960959';
+const leadForm = document.getElementById('lead-form');
+if (leadForm) leadForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const f = e.target;
-  const txt = `Pedido de orçamento Water Please%0A%0ANome: ${f.nome.value}%0ATelefone: ${f.telefone.value}%0AEmail: ${f.email.value}%0AEspaço: ${f.espaco.value}%0AEquipamento: ${f.equipamento.value}%0AMensagem: ${f.mensagem.value}`;
-  alert('Obrigado! Por agora o formulário não tem backend — Luis, ligamos ao CRM/email quando quiseres. Os dados ficam prontos a enviar.');
-  return false;
-}
+  const f = leadForm;
+  const linhas = [
+    '*Novo pedido — Water Please* 💧',
+    '',
+    'Nome: ' + (f.nome.value || '—'),
+    'Telefone: ' + (f.telefone.value || '—'),
+    'Email: ' + (f.email.value || '—'),
+    'Tipo de espaço: ' + (f.espaco.value || '—'),
+    'Equipamento: ' + (f.equipamento.value || '—'),
+    'Mensagem: ' + (f.mensagem.value || '—')
+  ];
+  const url = 'https://wa.me/' + WPP_LEADS + '?text=' + encodeURIComponent(linhas.join('\n'));
+  window.open(url, '_blank');
+  leadForm.style.display = 'none';
+  const ok = document.getElementById('lead-ok');
+  ok.style.display = 'block';
+  ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
 </script>
 </body>
 </html>
