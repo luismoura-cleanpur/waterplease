@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto / Pedir Orçamento — Water Please</title>
+<meta name="description" content="Peça um orçamento de equipamentos de água hidrogenada Water Please. Aconselhamento sem compromisso.">
+<link rel="icon" href="assets/simbolo.png">
+<link rel="stylesheet" href="assets/styles.css?v=49">
+<style>
+  .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .field { display:flex; flex-direction:column; gap:7px; }
+  .field.full { grid-column:1/-1; }
+  .field label { font-family:'Hanken Grotesk',sans-serif; font-weight:700; font-size:14.5px; color:var(--ink); }
+  .field input, .field select, .field textarea {
+    font-family:'Hanken Grotesk',sans-serif; font-size:16px; padding:13px 15px;
+    border:1px solid var(--hairline); border-radius:var(--r-sm); background:#fff; color:var(--ink);
+    transition:border-color .2s;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus { outline:none; border-color:var(--teal); }
+  .field textarea { resize:vertical; min-height:120px; }
+  @media (max-width:560px){ .form-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="nav__logo"><img src="assets/simbolo-verde.png" alt=""><span class="nav__word">Water<span>please</span><em>Cuida de Mim</em></span></a>
+    <button class="nav__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="nav__menu">
+      <button class="nav__close" aria-label="Fechar menu">✕</button>
+      <a href="o-que-e.html">O que é</a>
+      <a href="equipamentos.html">Equipamentos</a>
+      <a href="desporto.html">Desporto</a>
+      <a href="garrafas.html">Garrafas</a>
+      <a href="restauracao.html">Restauração</a>
+      <a href="index.html#porque">Porquê nós</a>
+      <a href="arte.html">Arte</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="contacto.html" class="btn btn--primary">Pedir orçamento</a>
+    
+      <div class="nav__social"><a href="#" class="placeholder">Instagram</a><a href="#" class="placeholder">LinkedIn</a></div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Início</a> · Contacto</div>
+    <h1>Vamos cuidar da tua água</h1>
+    <p>Diz-nos o teu espaço e objetivo. Recomendamos o equipamento certo, sem compromisso.</p>
+  </div>
+</section>
+<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,0 H1440 V26 C1180,84 940,12 680,44 C430,74 190,66 0,28 Z"/></svg>
+
+<section class="section">
+  <div class="wrap" style="max-width:920px">
+    <div class="split" style="align-items:start;gap:48px">
+
+      <!-- contactos diretos -->
+      <div class="reveal">
+        <h2 style="font-size:26px">Falar já</h2>
+        <p style="color:var(--muted);margin:10px 0 24px">A forma mais rápida — respondemos por WhatsApp.</p>
+        <a href="#" class="btn btn--wpp" data-wpp style="width:100%;justify-content:center;margin-bottom:14px">💬 WhatsApp</a>
+        <a href="mailto:geral@waterplease.pt" class="btn btn--ghost" style="width:100%;justify-content:center">✉️ geral@waterplease.pt</a>
+      </div>
+
+      <!-- formulario -->
+      <div class="card reveal">
+        <h2 style="font-size:26px;margin-bottom:6px">Pedir orçamento</h2>
+        <p style="color:var(--muted);margin-bottom:22px">Preenche e enviamos uma proposta à medida.</p>
+        <form class="form-grid" onsubmit="return enviarOrcamento(event)">
+          <div class="field"><label>Nome *</label><input name="nome" required></div>
+          <div class="field"><label>Telefone *</label><input name="telefone" required></div>
+          <div class="field full"><label>Email</label><input type="email" name="email"></div>
+          <div class="field"><label>Tipo de espaço</label>
+            <select name="espaco">
+              <option>Casa</option><option>Clínica / saúde</option><option>Ginásio</option>
+              <option>Hotel</option><option>Restauração</option><option>Escritório</option><option>Outro</option>
+            </select>
+          </div>
+          <div class="field"><label>Equipamento de interesse</label>
+            <select name="equipamento"><option>ROH2ICE</option><option>Ainda não sei</option><option>Outro</option></select>
+          </div>
+          <div class="field full"><label>Mensagem</label><textarea name="mensagem" placeholder="Conta-nos o que precisas..."></textarea></div>
+          <div class="field full"><button class="btn btn--primary" style="width:100%;justify-content:center" type="submit">Enviar pedido</button></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><img class="flogo" src="assets/logo-vertical-branco.png" alt="Water Please"><p style="font-size:15px;max-width:280px">Equipamentos de água hidrogenada premium. Cuida de mim.</p></div>
+      <div><h4>Navegação</h4><ul><li><a href="o-que-e.html">O que é</a></li><li><a href="equipamentos.html">Equipamentos</a></li><li><a href="desporto.html">Desporto</a></li><li><a href="garrafas.html">Garrafas</a></li><li><a href="restauracao.html">Restauração</a></li><li><a href="index.html#porque">Porquê nós</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div>
+      <div><h4>Equipamentos</h4><ul><li><a href="equipamentos/roh2ice.html">ROH2ICE</a></li><li><a href="equipamentos/garrafa-h2.html">Garrafa H₂</a></li><li><a href="equipamentos/ultra-detox-h2.html">Ultra Detox H₂</a></li><li><a href="equipamentos.html">Ver todos</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="mailto:geral@waterplease.pt">geral@waterplease.pt</a></li><li><a href="#" data-wpp>WhatsApp · 911 960 959</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Water Please · Cuida de Mim</span></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+// Por agora envia por WhatsApp/email (sem backend). Luis: ligamos a um backend/CRM quando quiseres.
+function enviarOrcamento(e){
+  e.preventDefault();
+  const f = e.target;
+  const txt = `Pedido de orçamento Water Please%0A%0ANome: ${f.nome.value}%0ATelefone: ${f.telefone.value}%0AEmail: ${f.email.value}%0AEspaço: ${f.espaco.value}%0AEquipamento: ${f.equipamento.value}%0AMensagem: ${f.mensagem.value}`;
+  alert('Obrigado! Por agora o formulário não tem backend — Luis, ligamos ao CRM/email quando quiseres. Os dados ficam prontos a enviar.');
+  return false;
+}
+</script>
+</body>
+</html>

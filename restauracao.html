@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restauração — Água da casa, elevada | Water Please</title>
+<meta name="description" content="Água premium servida pela casa: filtrada, fria, quente ou hidrogenada. Zero garrafas de plástico, mais margem e uma experiência à mesa que os clientes lembram.">
+<link rel="icon" href="assets/simbolo.png">
+<link rel="stylesheet" href="assets/styles.css?v=49">
+<style>
+  .resto-quote { font-family:'Chubbo',sans-serif; font-weight:700; font-size:clamp(26px,3.6vw,44px); line-height:1.15; color:var(--ink); max-width:820px; margin:0 auto; text-align:center; }
+  .resto-quote b { color:var(--teal-dark); }
+  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(18px,2.4vw,26px); counter-reset:passo; }
+  .step { background:var(--deep-2); border:1px solid rgba(255,255,255,.09); border-radius:var(--r-lg); padding:clamp(26px,3vw,38px); counter-increment:passo; }
+  .step::before { content:"0" counter(passo); font-family:'Chubbo',sans-serif; font-weight:700; font-size:15px; color:var(--teal); letter-spacing:.1em; display:block; margin-bottom:14px; }
+  .step h3 { color:#fff; font-size:21px; margin-bottom:10px; }
+  .step p { color:rgba(255,255,255,.66); font-size:15.5px; }
+  .carta { max-width:520px; margin:0 auto; background:#fff; border:1px solid var(--hairline); border-radius:var(--r-lg); box-shadow:var(--shadow-sm); padding:clamp(30px,4vw,46px); }
+  .carta h3 { text-align:center; font-size:16px; letter-spacing:.24em; text-transform:uppercase; color:var(--teal-dark); margin-bottom:24px; }
+  .carta ul li { display:flex; justify-content:space-between; align-items:baseline; gap:14px; padding:13px 0; border-bottom:1px dashed var(--hairline); font-size:16.5px; color:var(--ink); }
+  .carta ul li:last-child { border-bottom:0; }
+  .carta ul li em { font-style:normal; color:var(--muted); font-size:13.5px; white-space:nowrap; }
+  @media (max-width:860px){ .steps{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="nav__logo" aria-label="Water Please"><img src="assets/simbolo-verde.png" alt=""><span class="nav__word">Water<span>please</span><em>Cuida de Mim</em></span></a>
+    <button class="nav__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="nav__menu">
+      <button class="nav__close" aria-label="Fechar menu">✕</button>
+      <a href="o-que-e.html">O que é</a>
+      <a href="index.html#sustentabilidade">Sustentabilidade</a>
+      <a href="equipamentos.html">Equipamentos</a>
+      <a href="desporto.html">Desporto</a>
+      <a href="garrafas.html">Garrafas</a>
+      <a href="restauracao.html">Restauração</a>
+      <a href="arte.html">Arte</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="contacto.html" class="btn btn--primary">Pedir orçamento</a>
+      <div class="nav__social"><a href="#" class="placeholder">Instagram</a><a href="#" class="placeholder">LinkedIn</a></div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Início</a> · Restauração</div>
+    <h1>A água da casa, <span style="color:var(--teal)">elevada</span>.</h1>
+    <p>Para restaurantes, cafés e hotéis que querem servir água de excelência — sem garrafas, sem plástico, com assinatura própria.</p>
+    <div class="clientes-marquee" aria-label="Clientes de referência">
+      <span class="clientes-label">Confiam em nós</span>
+      <div class="clientes-track clientes-track--logos"><span class="cli"><img src="assets/clientes/casa-cisnes.jpg" alt=""></span><span class="cli"><img src="assets/clientes/conga.jpg" alt=""></span><span class="cli"><img src="assets/clientes/cozinha-terra.jpg" alt=""></span><span class="cli"><img src="assets/clientes/casanova.jpg" alt=""></span><span class="cli"><img src="assets/clientes/beef.jpg" alt=""></span><span class="cli"><img src="assets/clientes/solar-levada.jpg" alt=""></span><span class="cli"><img src="assets/clientes/gtreze.jpg" alt=""></span><span class="cli"><img src="assets/clientes/conversas.jpg" alt=""></span><span class="cli"><img src="assets/clientes/divino.jpg" alt=""></span><span class="cli"><img src="assets/clientes/golf-dagua.jpg" alt=""></span><span class="cli"><img src="assets/clientes/chao-prado.jpg" alt=""></span><span class="cli"><img src="assets/clientes/melro.jpg" alt=""></span><span class="cli"><img src="assets/clientes/casa-cisnes.jpg" alt=""></span><span class="cli"><img src="assets/clientes/conga.jpg" alt=""></span><span class="cli"><img src="assets/clientes/cozinha-terra.jpg" alt=""></span><span class="cli"><img src="assets/clientes/casanova.jpg" alt=""></span><span class="cli"><img src="assets/clientes/beef.jpg" alt=""></span><span class="cli"><img src="assets/clientes/solar-levada.jpg" alt=""></span><span class="cli"><img src="assets/clientes/gtreze.jpg" alt=""></span><span class="cli"><img src="assets/clientes/conversas.jpg" alt=""></span><span class="cli"><img src="assets/clientes/divino.jpg" alt=""></span><span class="cli"><img src="assets/clientes/golf-dagua.jpg" alt=""></span><span class="cli"><img src="assets/clientes/chao-prado.jpg" alt=""></span><span class="cli"><img src="assets/clientes/melro.jpg" alt=""></span></div>
+    </div>
+  </div>
+</section>
+<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,0 H1440 V26 C1180,84 940,12 680,44 C430,74 190,66 0,28 Z"/></svg>
+
+<section class="section">
+  <div class="wrap">
+    <p class="resto-quote reveal">"A água deixou de ser o que se compra ao fornecedor.<br>Passou a ser <b>o que a casa serve com orgulho</b>."</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap reveal">
+    <img loading="lazy" decoding="async" src="assets/horeca.jpg" alt="Equipamentos Water Please em contexto HORECA — cafés, buffets e hotéis" style="width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-sm);border:1px solid var(--hairline)">
+  </div>
+</section>
+
+<section class="section section--cream" style="padding-top:0">
+  <div class="wrap">
+    <div class="split" style="padding-top:clamp(56px,8vw,100px)">
+      <div class="reveal">
+        <span class="eyebrow">A proposta</span>
+        <h2>Serve a tua própria água. <i>Ganha com isso.</i></h2>
+        <p class="lead" style="margin:18px 0 24px">Com um equipamento Water Please, a água que chega à mesa é feita na casa: purificada na hora, fria, quente ou hidrogenada. Deixa de haver garrafas para comprar, armazenar e deitar fora.</p>
+        <ul class="checklist">
+          <li><span><b>Margem para a casa</b> — água da casa servida em garrafa reutilizável, em vez de stock comprado</span></li>
+          <li><span><b>Zero plástico e zero logística</b> — sem grades, sem arcas cheias, sem lixo</span></li>
+          <li><span><b>Experiência à mesa</b> — água fresca ou quente, sempre pronta; hidrogenada para quem procura mais</span></li>
+          <li><span><b>Sustentabilidade que se vê</b> — um argumento verdadeiro para a carta e para os clientes</span></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="carta">
+          <h3>Carta de Águas · da casa</h3>
+          <ul>
+            <li>Água fresca filtrada <em>10 ºC · sempre pronta</em></li>
+            <li>Água natural filtrada <em>à temperatura ambiente</em></li>
+            <li>Água quente para chá <em>45–98 ºC · instantânea</em></li>
+            <li>Água hidrogenada <em>até 2400 PPB · na hora</em></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--deep">
+  <div class="wrap">
+    <div class="center reveal" style="margin-bottom:50px">
+      <span class="eyebrow">Como funciona</span>
+      <h2 style="color:#fff">Três passos, <i>sem obras</i>.</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><h3>Avaliação</h3><p>Visitamos o teu espaço, medimos o consumo e recomendamos o equipamento certo — de bancada (sem instalação) ou integrado na cozinha.</p></div>
+      <div class="step"><h3>Instalação</h3><p>Entregamos, instalamos e formamos a equipa num dia. O ROH2ICE não precisa de obras; o Ultra Detox liga-se sob a bancada.</p></div>
+      <div class="step"><h3>Acompanhamento</h3><p>Filtros, manutenção e apoio contínuo por nossa conta. Tu serves a água; nós tratamos do resto.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat reveal"><div class="stat__num">360<sup>L/dia</sup></div><div class="stat__lbl">Produção do ROH2ICE — chega para o serviço inteiro</div></div>
+      <div class="stat reveal" data-d="1"><div class="stat__num">1,6<sup>L/min</sup></div><div class="stat__lbl">Fluxo direto do Ultra Detox H₂ na cozinha</div></div>
+      <div class="stat reveal" data-d="2"><div class="stat__num">0</div><div class="stat__lbl">Garrafas compradas, armazenadas ou deitadas fora</div></div>
+      <div class="stat reveal" data-d="3"><div class="stat__num">9</div><div class="stat__lbl">Temperaturas — da água do chá à do copo gelado</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--cream">
+  <div class="wrap">
+    <div class="center reveal" style="margin-bottom:50px">
+      <span class="eyebrow">O equipamento certo</span>
+      <h2>Dois caminhos para a tua casa.</h2>
+    </div>
+    <div class="grid-2 reveal" style="max-width:900px;margin:0 auto">
+      <div class="card">
+        <h3>ROH2ICE — na sala</h3>
+        <p>De bancada, sem obras. Fria, quente e hidrogenada à vista do cliente — presença premium no balcão.</p>
+        <a href="equipamentos/roh2ice.html" class="btn btn--ghost" style="margin-top:18px;padding:10px 20px;font-size:15px">Ver ficha →</a>
+      </div>
+      <div class="card">
+        <h3>Ultra Detox H₂ — na cozinha</h3>
+        <p>Sob a bancada, com torneira própria. Osmose + hidrogénio em fluxo direto de 1,6 L/min para todo o serviço.</p>
+        <a href="equipamentos/ultra-detox-h2.html" class="btn btn--ghost" style="margin-top:18px;padding:10px 20px;font-size:15px">Ver ficha →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section parceiros">
+  <div class="wrap">
+    <div class="parceiros-grid">
+      <div class="parceiros-mosaico reveal">
+        <img loading="lazy" decoding="async" src="assets/parceiros/ginasio.jpg" alt="Cliente a encher garrafa reutilizável num ginásio">
+        <img loading="lazy" decoding="async" src="assets/parceiros/balcao.jpg" alt="Garrafas de água da casa num balcão de restaurante">
+        <img loading="lazy" decoding="async" src="assets/parceiros/garrafas.jpg" alt="Garrafas reutilizáveis em tons suaves">
+        <img loading="lazy" decoding="async" src="assets/parceiros/servico.jpg" alt="Serviço de água fresca num restaurante">
+        <img loading="lazy" decoding="async" src="assets/parceiros/escritorio.jpg" alt="Garrafa reutilizável numa secretária de escritório">
+      </div>
+      <div class="parceiros-txt reveal">
+        <span class="eyebrow">Os nossos parceiros</span>
+        <h2>Casas que já servem <i>a sua própria água</i>.</h2>
+        <p>Já são muitas as casas que confiaram na <b>Water Please</b> e se juntaram a este movimento. Para cada uma desenhámos um serviço <b>à medida</b> — do balcão de café ao serviço de sala — para servir a água de mais <b>qualidade</b> com <b>zero resíduos</b>.</p>
+        <p><b>Junta a tua casa à mudança.</b></p>
+        <a href="contacto.html" class="btn btn--primary" style="margin-top:8px">Falar connosco</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Queres a tua carta de águas?</h2>
+      <p>Diz-nos o teu espaço e o volume de serviço. Fazemos a avaliação e a proposta sem compromisso.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="contacto.html" class="btn btn--light">Pedir avaliação</a>
+        <a href="#" class="btn btn--outline-light" data-wpp>Falar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><img class="flogo" src="assets/logo-vertical-branco.png" alt="Water Please"><p style="font-size:15px;max-width:280px">Água hidrogenada premium, sem plástico de uso único. Cuida de mim.</p></div>
+      <div><h4>Navegação</h4><ul><li><a href="o-que-e.html">O que é</a></li><li><a href="equipamentos.html">Equipamentos</a></li><li><a href="desporto.html">Desporto</a></li><li><a href="garrafas.html">Garrafas</a></li><li><a href="restauracao.html">Restauração</a></li><li><a href="arte.html">Arte</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div>
+      <div><h4>Equipamentos</h4><ul><li><a href="equipamentos/roh2ice.html">ROH2ICE</a></li><li><a href="equipamentos/garrafa-h2.html">Garrafa H₂</a></li><li><a href="equipamentos/ultra-detox-h2.html">Ultra Detox H₂</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="mailto:geral@waterplease.pt">geral@waterplease.pt</a></li><li><a href="#" data-wpp>WhatsApp · 911 960 959</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Water Please · Cuida de Mim</span></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
