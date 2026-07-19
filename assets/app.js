@@ -47,7 +47,7 @@ const io = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 // WhatsApp placeholder — Luis: troca WPP_NUMERO pelo número real (formato 351XXXXXXXXX)
-const WPP_NUMERO = '351911960959';
+const WPP_NUMERO = '351937597148';
 const WPP_MSG = encodeURIComponent('Olá! Tenho interesse nos equipamentos de água hidrogenada da Water Please.');
 document.querySelectorAll('[data-wpp]').forEach(a => {
   a.addEventListener('click', (e) => {
