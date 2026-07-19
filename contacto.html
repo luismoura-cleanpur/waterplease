@@ -112,12 +112,40 @@
 
 <script src="assets/app.js"></script>
 <script>
-// Captação de leads → envia o pedido direto para o WhatsApp da Water Please.
+// Captação de leads → grava no CRM (Supabase) E abre o WhatsApp da Water Please.
 const WPP_LEADS = '351911960959';
+const CRM_URL = 'https://qczgsvpjmzuopweekxez.supabase.co';
+const CRM_KEY = 'sb_publishable_a8NASJiCJkUdRTV060l7mg_PXAYLs6I';
+
+// Grava o lead direto no CRM (não bloqueia o envio se falhar).
+function gravarNoCRM(f) {
+  const lead = {
+    nome: f.nome.value || null,
+    telefone: f.telefone.value || null,
+    email: f.email.value || null,
+    origem: 'Site',
+    espaco: f.espaco.value || null,
+    equipamento: f.equipamento.value || null,
+    estado: 'novo',
+    notas: f.mensagem.value ? [{ t: new Date().toISOString(), txt: f.mensagem.value }] : []
+  };
+  return fetch(CRM_URL + '/rest/v1/leads', {
+    method: 'POST',
+    headers: {
+      'apikey': CRM_KEY,
+      'Authorization': 'Bearer ' + CRM_KEY,
+      'Content-Type': 'application/json',
+      'Prefer': 'return=minimal'
+    },
+    body: JSON.stringify(lead)
+  }).catch(function () {});
+}
+
 const leadForm = document.getElementById('lead-form');
 if (leadForm) leadForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const f = leadForm;
+  gravarNoCRM(f); // cai no CRM
   const linhas = [
     '*Novo pedido — Water Please* 💧',
     '',
